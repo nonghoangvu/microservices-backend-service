@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/codebase/api-gateway/pom.xml" />
         <option value="$PROJECT_DIR$/codebase/authentication-service/pom.xml" />
         <option value="$PROJECT_DIR$/codebase/account-service/pom.xml" />
+        <option value="$PROJECT_DIR$/codebase/config-server/pom.xml" />
       </list>
     </option>
   </component>

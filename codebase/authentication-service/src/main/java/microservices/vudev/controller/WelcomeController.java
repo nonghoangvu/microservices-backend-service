@@ -1,6 +1,8 @@
 package microservices.vudev.controller;
 
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,6 +12,7 @@ import org.springframework.web.client.RestTemplate;
 @RefreshScope
 @RestController
 public class WelcomeController {
+    private static final Logger log = LoggerFactory.getLogger(WelcomeController.class);
     private final RestTemplate restTemplate;
 
     public WelcomeController(RestTemplate restTemplate) {
@@ -18,7 +21,7 @@ public class WelcomeController {
 
     @GetMapping("/welcome")
     public String welcome() {
-        System.out.println("================> Authentication service");
+        log.info("Welcome to the account service");
         return "Welcome to authentication service";
     }
 
